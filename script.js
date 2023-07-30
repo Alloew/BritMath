@@ -47,6 +47,8 @@ select_type.addEventListener("change", () => {
         div_light.style.display = "none";
         div_vel.style.display = "none";
         div_gamma.style.display = "flex";
+    } else {
+        window.location.href = "/g";
     }
 });
 
