@@ -1,13 +1,14 @@
 var x = [], y = [];
 const c = 299792458;
+const samples = 1000;
 
-for (var i = 0; i < c / 1000; i++) {
+for (var i = 0; i < samples; i++) {
     var gamma = 1 /
         (Math.sqrt(1 -
-            ((i * 1000) / c) ** 2
+            ((i * c / samples) / c) ** 2
         ));
 
-    x.push(i * 1000);
+    x.push(i * c / samples);
     y.push(gamma);
 }
 
@@ -27,8 +28,13 @@ var layout = {
     yaxis: {
         title: "Relativity Gamma"
     },
-    width: window.innerWidth,
-    height: window.innerHeight,
+    width: document.documentElement.clientWidth,
+    height: document.documentElement.clientHeight,
 }
 
-Plotly.newPlot("plot", data, layout);
+const plotDiv = document.getElementById("plot");
+Plotly.newPlot(plotDiv, data, layout);
+
+window.addEventListener("resize", () => {
+    Plotly.update(plotDiv, {}, { width: document.documentElement.clientWidth, height: document.documentElement.clientHeight }, [0]);
+})
