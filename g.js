@@ -27,9 +27,8 @@ var layout = {
     yaxis: {
         title: "Relativity Gamma"
     },
-    margin: {
-        pad: 24,
-    }
+    width: window.innerWidth,
+    height: window.innerHeight,
 }
 
 Plotly.newPlot("plot", data, layout);
