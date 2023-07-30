@@ -1,13 +1,13 @@
 var x = [], y = [];
 const c = 299792458;
 
-for (var i = 0; i < c / 1000000; i++) {
+for (var i = 0; i < c / 1000; i++) {
     var gamma = 1 /
         (Math.sqrt(1 -
-            ((i * 1000000) / c) ** 2
+            ((i * 1000) / c) ** 2
         ));
 
-    x.push(i * 1000000);
+    x.push(i * 1000);
     y.push(gamma);
 }
 
