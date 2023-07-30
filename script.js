@@ -47,8 +47,10 @@ select_type.addEventListener("change", () => {
         div_light.style.display = "none";
         div_vel.style.display = "none";
         div_gamma.style.display = "flex";
-    } else {
+    } else if (select_type.value == "graph") {
         window.location.href = "/g";
+    } else if (select_type.value == "orbit") {
+        window.location.href = "/orbit";
     }
 });
 
