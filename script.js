@@ -49,7 +49,7 @@ select_type.addEventListener("change", () => {
         div_gamma.style.display = "flex";
     } else if (select_type.value == "graph") {
         window.location.href = "/g";
-    } else if (select_type.value == "orbit") {
+    } else {
         window.location.href = "/orbit";
     }
 });
