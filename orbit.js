@@ -4,7 +4,7 @@ var lastIssX = -1;
 var lastIssY = -1;
 
 var earthRotation = 0;
-var issRotation = 0;
+var issRotation = 150*PI/180;
 const r = 6371;
 var frames = 0;
 var totalSpeed = 0;
