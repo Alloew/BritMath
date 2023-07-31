@@ -3,8 +3,8 @@ var lastPY = -1;
 var lastIssX = -1;
 var lastIssY = -1;
 
-var earthRotation = 10*PI/180;
-var issRotation = 150*PI/180;
+var earthRotation = 10*3.13/180;
+var issRotation = 150*3.14/180;
 const r = 6371;
 var frames = 0;
 var totalSpeed = 0;
