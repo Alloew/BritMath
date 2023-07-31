@@ -23,7 +23,6 @@ function setup() {
 }
 
 function draw() {
-    if (!done) {
         // One second = one hour
         var scale = (r * 2) / Math.min(window.innerHeight - 100, window.innerWidth - 100);
 
@@ -73,7 +72,7 @@ function draw() {
             frames++;
             totalSpeed += diff;
             // console.log(frames);
-        } else {
+        } else if (!done) {
             done = true;
 
             average = totalSpeed / frames;
@@ -82,7 +81,6 @@ function draw() {
             console.log(`${averageMs}m/s`);
             alert(`Average Velocity: ${averageMs}m/s`)
         }
-    }
 }
 
 window.addEventListener("resize", () => {
