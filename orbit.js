@@ -47,8 +47,8 @@ function draw() {
         fill(255, 0, 0);
         ellipse(pX, pY, 12);
 
-        var issX = window.innerWidth / 2 + cos(issRotation + earthRotation) * (r + 417) / scale;
-        var issY = window.innerHeight / 2 + sin(issRotation + earthRotation) * (r + 417) / scale;
+        var issX = window.innerWidth / 2 + cos(issRotation) * (r + 417) / scale;
+        var issY = window.innerHeight / 2 + sin(issRotation) * (r + 417) / scale;
 
         fill(0, 255, 0);
         ellipse(issX, issY, 12);
