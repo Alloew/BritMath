@@ -27,7 +27,7 @@ function draw() {
         var scale = (r * 2) / Math.min(window.innerHeight - 100, window.innerWidth - 100);
 
         earthRotation += 360 / (24*60*60*60*deltaTime/1000) * PI / 180;
-        issRotation += 360 / (92.9*60*60*deltaTime/1000) *PI / 180; // 92.9 minute orbital period
+        issRotation += 360 / (92.9*60*60*60*deltaTime/1000) *PI / 180; // 92.9 minute orbital period
 
         background(20);
         noStroke();
