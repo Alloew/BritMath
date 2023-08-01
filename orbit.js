@@ -3,8 +3,8 @@ var lastPY = -1;
 var lastIssX = -1;
 var lastIssY = -1;
 
-var earthRotation = 18*3.13/180;
-var issRotation = 223*3.14/180;
+var earthRotation = 0;
+var issRotation = 0;
 const r = 6371;
 var frames = 0;
 var totalSpeed = 0;
@@ -26,13 +26,13 @@ function draw() {
         // One second = one hour
         var scale = (r * 2) / Math.min(window.innerHeight - 100, window.innerWidth - 100);
 
-        //earthRotation += 360 / (24*60*60*60*60*deltaTime/1000) * PI / 180;
-        //issRotation += 360 / (92.9*60*60*60*deltaTime/1000) *PI / 180; // 92.9 minute orbital period
+        earthRotation += 360 / (24*60*60*60*60*deltaTime/1000) * PI / 180*100;
+        issRotation += 360 / (92.9*60*60*60*deltaTime/1000) *PI / 180*100; // 92.9 minute orbital period
 
-        earthRotation=Math.random()*2*PI/360*deltaTime;
-        earthRotation -=earthRotation/2;
-        issRotation=issRotation/2;
-        issRotation+=Math.random()*2*PI/360*deltaTime;
+        //earthRotation=Math.random()*2*PI/360*deltaTime;
+        //earthRotation -=earthRotation/2;
+        //issRotation=issRotation/2;
+        //issRotation+=Math.random()*2*PI/360*deltaTime;
         background(20);
         noStroke();
 
