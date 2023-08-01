@@ -29,8 +29,8 @@ function draw() {
         //earthRotation += 360 / (24*60*60*60*60*deltaTime/1000) * PI / 180;
         //issRotation += 360 / (92.9*60*60*60*deltaTime/1000) *PI / 180; // 92.9 minute orbital period
 
-        earthRotation+=Math.random()*2*PI;
-        issRotation+=Math.random()*2*PI;
+        earthRotation+=Math.random()*2*PI/360;
+        issRotation+=Math.random()*2*PI/360;
         background(20);
         noStroke();
 
