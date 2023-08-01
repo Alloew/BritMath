@@ -63,7 +63,7 @@ function draw() {
         );
 
         fill(255);
-        text(issRotation * 180 / PI, 50, 50);
+        //text(issRotation * 180 / PI, 50, 50);
         noStroke();
 
         lastPX = pX;
